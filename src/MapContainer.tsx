@@ -6,7 +6,6 @@ import { CloseButton } from './CloseButton';
 import { ResetButton } from './ResetButton';
 import { PopupArch } from './PopupArch';
 import { ListViewDrawer } from './ListViewDrawer';
-import 'mapbox-gl/dist/mapbox-gl.css';
 
 export interface SubCategory {
   id: number;
@@ -129,8 +128,8 @@ export const MapContainer = ({ api_key, allPins, closeMap }: MapProps) => {
           setPlace={setPlace}
         />
       )}
-      <div className="absolute top-2 right-2 z-50 flex">
-        <div className="mr-4">
+      <div className="absolute top-3 right-3 z-50 flex flex-col md:flex-row">
+        <div className="mb-2 md:mb-0 md:mr-4">
           <ListViewButton
             width="20px"
             height="20px"
@@ -138,7 +137,7 @@ export const MapContainer = ({ api_key, allPins, closeMap }: MapProps) => {
             onClick={drawerHandler}
           />
         </div>
-        <div className="mr-4">
+        <div className="mb-2 md:mb-0 md:mr-4">
           <ResetButton
             width="20px"
             height="20px"

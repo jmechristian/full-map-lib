@@ -37,7 +37,9 @@ export const ListViewItem = ({ name, link }: ListItemProps) => {
     <div className="inline-block">
       <div className="flex items-center">
         <div className="color-brand mr-5">{itemMarkerIcon}</div>
-        <div className="text-lg text-slate-900">{name}</div>
+        <div className=" text-slate-900" style={{ fontSize: '16px' }}>
+          {name}
+        </div>
         <div className="ml-1">
           {link ? (
             <a href={link} target="_blank">
